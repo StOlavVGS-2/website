@@ -1,0 +1,11 @@
+version: '1.0'
+
+services:
+    Website1:
+        image: ghcr.io/StOlavVGS/website:latest #change StOlavVGS to your username and website to your respitory name
+        deploy:
+        labels:labels: [com.centurylinklabs.watchtower.enable=true]
+        container_name: website #Your firstname-"usernameAtSchool"
+        restart: always
+        ports:
+            - "80:80" #Change first port if using nginx
